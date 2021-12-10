@@ -1,0 +1,18 @@
+There is an input, which is the user's hand sign (rock, paper, scissors)
+The output is the result of the game
+There is no GUI
+
+Brief the user about the game;
+Make a variable that prompt the user for an answer;
+Make a variable or a function that randomly chooses between rock, paper and scissors;
+Compare the user's variable with the computer's variable;
+
+If user input === computer variable:
+    draw;
+else if (user input === rock && comp input === scissors || user input === scissors && comp input === paper ||| user input === paper && comp input === rock):
+    user wins;
+else: 
+    user lose;
+
+
+Output the result based on the comparison;
