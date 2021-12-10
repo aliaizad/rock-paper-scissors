@@ -1,23 +1,30 @@
-// Brief the user about the game;
-alert("Rock, paper, scissors!")
-// // Make a variable that prompt the user for an answer;
-let userInput = prompt("Rock, paper or scissors?");
-userInput = userInput.toLowerCase();
-// Make a variable or a function that randomly chooses between rock, paper and scissors;
-let handSigns = ['rock', 'paper', 'scissors'];
-let compInput = handSigns[Math.floor(Math.random()*handSigns.length)];
-// Compare the user's variable with the computer's variable;
-if (userInput != "rock" && userInput != "paper" && userInput != "scissors") {
-    alert ("Please check your answer!");
-} else if (userInput === compInput) {
-    alert(`Computer plays ${compInput}`);
-    alert("It is a draw");
-} else if (userInput === "rock" && compInput === "scissors" || userInput === "scissors" && compInput === "paper" || userInput === "paper" && compInput === "rock") {
-    alert(`Computer plays ${compInput}`);
-    alert(`You win, ${userInput} beats ${compInput}!` );
-} else {
-    alert(`Computer plays ${compInput}`);
-    alert(`You lose, ${compInput} beats ${userInput}!`)
-}
 
-// Output the result based on the comparison;
+// Write a function that randomly chooses between rock, paper and scissors;
+function computerPlay () {
+    let handSigns = ['rock', 'paper', 'scissors'];
+    let computerSelection = handSigns[Math.floor(Math.random()*handSigns.length)];
+    return computerSelection;
+}
+// Write a function that compares the player's hand and the computer's hand && also outputs the result.
+function playRound () {
+    playerSelection = prompt("Rock, paper or scissors?");
+    playerSelection = playerSelection.toLowerCase();
+    computerSelection = computerPlay();
+    if (playerSelection != "rock" && playerSelection != "paper" && playerSelection != "scissors") {
+        return ("Please check your input!");
+    } else if (playerSelection === computerSelection) {
+        return(`Computer plays ${computerSelection}. It is a draw`);
+    } else if (playerSelection === "rock" && computerSelection === "scissors" || playerSelection === "scissors" && computerSelection === "paper" || playerSelection === "paper" && computerSelection === "rock") {
+        return(`Computer plays ${computerSelection}. You win, ${playerSelection} beats ${computerSelection}!`);
+    } else {
+        return(`Computer plays ${computerSelection}. You lose, ${computerSelection} beats ${playerSelection}!`);
+    }    
+}
+//write a function that plays the game five times.
+function game() {
+    console.log(playRound());
+    console.log(playRound());
+    console.log(playRound());
+    console.log(playRound());
+    console.log(playRound());
+}
