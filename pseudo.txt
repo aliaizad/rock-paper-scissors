@@ -1,9 +1,11 @@
-There is an input, which is the user's hand sign (rock, paper, scissors)
-The output is the result of the game
-There is no GUI
+A user click on the button;
+The outcome of the game is determine;
+The counter increases or not;
 
-Brief the user about the game;
-Make a variable that prompt the user for an answer;
+
+
+
+
 Make a variable or a function that randomly chooses between rock, paper and scissors;
 Compare the user's variable with the computer's variable;
 
